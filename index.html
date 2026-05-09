@@ -283,6 +283,58 @@
     .tip-card h3 { font-size: 1rem; color: var(--ink); margin-bottom: 0.4rem; }
     .tip-card p  { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 
+    /* ── RECORD SALES ── */
+    #record-sales { background: var(--parch); }
+
+    .sales-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .sale-card {
+      background: white;
+      border: 1px solid #e8d8b0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .sale-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    }
+    .sale-card-header {
+      background: linear-gradient(135deg, var(--dark), #3a2510);
+      padding: 1.2rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .sale-rank {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-lt), var(--gold));
+      color: var(--dark); font-weight: bold; font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sale-card-header h3 { color: var(--cream); font-size: 0.95rem; line-height: 1.3; }
+    .sale-card-body { padding: 1.2rem 1.5rem; }
+    .sale-price {
+      font-size: 1.5rem; font-weight: bold;
+      color: var(--gold); margin-bottom: 0.3rem;
+    }
+    .sale-meta {
+      font-size: 0.78rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.8rem;
+    }
+    .sale-card-body p { font-size: 0.88rem; color: #5a4530; line-height: 1.7; }
+    .sale-tag {
+      display: inline-block; margin-top: 0.8rem;
+      background: rgba(201,149,42,0.12); color: var(--gold);
+      border: 1px solid rgba(201,149,42,0.3);
+      padding: 0.2rem 0.7rem; border-radius: 20px;
+      font-size: 0.75rem; letter-spacing: 0.08em;
+    }
+
     /* ── QUOTE ── */
     #quote {
       background: linear-gradient(135deg, #2e1f0a 0%, #1a1208 100%);
@@ -332,6 +384,7 @@
       <li><a href="#categories">Categories</a></li>
       <li><a href="#grading">Grading</a></li>
       <li><a href="#tips">Start Collecting</a></li>
+      <li><a href="#record-sales">Record Sales</a></li>
     </ul>
   </nav>
 
@@ -554,6 +607,149 @@
           <h3>Join a Coin Club</h3>
           <p>Local and national clubs (ANA, BSNS, etc.) offer mentorship, shows, and auctions. The numismatic community is welcoming and the shared knowledge is invaluable.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECORD SALES -->
+  <section id="record-sales">
+    <div class="container">
+      <p class="section-label">Most Valuable</p>
+      <h2>10 Coins That Sold for Fortunes</h2>
+      <div class="divider"></div>
+
+      <div class="sales-grid">
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">1</div>
+            <h3>1794 Flowing Hair Silver Dollar</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$10,016,875</div>
+            <div class="sale-meta">USA &nbsp;·&nbsp; Sold 2013 — Stack's Bowers</div>
+            <p>Believed to be the very first silver dollar struck by the United States Mint. Only 1,758 were minted. This specimen is considered the finest known example in existence.</p>
+            <span class="sale-tag">American Rarity</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">2</div>
+            <h3>1933 Saint-Gaudens Double Eagle</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$18,872,250</div>
+            <div class="sale-meta">USA &nbsp;·&nbsp; Sold 2021 — Sotheby's</div>
+            <p>The most valuable coin ever sold at auction. Nearly all 1933 Double Eagles were melted before circulation. This single legal example fetched a world record price at Sotheby's New York.</p>
+            <span class="sale-tag">World Record</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">3</div>
+            <h3>1343 Edward III Florin</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$6,800,000</div>
+            <div class="sale-meta">England &nbsp;·&nbsp; Sold 2006 — Spink & Son</div>
+            <p>Only three examples of this medieval English gold coin are known to exist. Struck during the reign of King Edward III, it is one of the rarest coins from the entire medieval period.</p>
+            <span class="sale-tag">Medieval Rarity</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">4</div>
+            <h3>1787 Brasher Doubloon (EB on Breast)</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$9,360,000</div>
+            <div class="sale-meta">USA &nbsp;·&nbsp; Sold 2021 — Heritage Auctions</div>
+            <p>Struck by goldsmith Ephraim Brasher before the U.S. Mint existed, this privately minted gold coin is one of America's earliest and most storied numismatic treasures.</p>
+            <span class="sale-tag">Pre-Federal Coinage</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">5</div>
+            <h3>1913 Liberty Head Nickel</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$4,560,000</div>
+            <div class="sale-meta">USA &nbsp;·&nbsp; Sold 2018 — Heritage Auctions</div>
+            <p>Only five specimens exist. The Liberty Head design was officially replaced in 1913, making these coins unauthorized strikes shrouded in mystery. Each one has its own documented history.</p>
+            <span class="sale-tag">Only 5 Known</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">6</div>
+            <h3>723 AD Umayyad Gold Dinar</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$6,029,400</div>
+            <div class="sale-meta">Islamic Caliphate &nbsp;·&nbsp; Sold 2011 — Morton & Eden</div>
+            <p>The most valuable Islamic coin ever sold. Minted during the Umayyad Caliphate, it references a mine owned by the Caliph and is considered unique — no other example is known.</p>
+            <span class="sale-tag">Unique Specimen</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">7</div>
+            <h3>1804 Silver Dollar (Class I)</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$4,140,000</div>
+            <div class="sale-meta">USA &nbsp;·&nbsp; Sold 1999 — Sotheby's</div>
+            <p>Known as the "King of American Coins," the 1804 dollar was actually struck decades later as diplomatic gifts. Only 15 are known. Each appearance at auction makes headlines worldwide.</p>
+            <span class="sale-tag">King of Coins</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">8</div>
+            <h3>1907 Ultra High Relief Double Eagle</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$2,990,000</div>
+            <div class="sale-meta">USA &nbsp;·&nbsp; Sold 2005 — Heritage Auctions</div>
+            <p>Designed by Augustus Saint-Gaudens at President Theodore Roosevelt's request, this stunning gold coin was too impractical to mass-produce. The ultra high relief version is considered America's most beautiful coin.</p>
+            <span class="sale-tag">Most Beautiful U.S. Coin</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">9</div>
+            <h3>1822 Half Eagle Gold Coin</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$8,400,000</div>
+            <div class="sale-meta">USA &nbsp;·&nbsp; Sold 2021 — Stack's Bowers</div>
+            <p>Only three 1822 Half Eagles are known — and two reside permanently in the Smithsonian Institution. This single privately held example is therefore effectively the only one collectors can ever own.</p>
+            <span class="sale-tag">1 of 1 Available</span>
+          </div>
+        </div>
+
+        <div class="sale-card">
+          <div class="sale-card-header">
+            <div class="sale-rank">10</div>
+            <h3>2007 Queen Elizabeth II $1M Gold Maple Leaf</h3>
+          </div>
+          <div class="sale-card-body">
+            <div class="sale-price">$4,020,000</div>
+            <div class="sale-meta">Canada &nbsp;·&nbsp; Sold 2010 — Vienna Auction</div>
+            <p>Struck by the Royal Canadian Mint in 99.999% pure gold, this massive coin weighs 100 kilograms and measures 50 cm across. Originally a promotional piece, it became one of the most remarkable coins ever made.</p>
+            <span class="sale-tag">100kg Pure Gold</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
