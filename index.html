@@ -73,14 +73,10 @@
     #hero::after  { width: 900px; height: 900px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 
     .coin-icon {
-      width: 110px; height: 110px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, var(--gold-lt), var(--gold) 50%, #7a5510);
-      box-shadow: 0 0 0 6px rgba(201,149,42,0.3), 0 0 40px rgba(201,149,42,0.25), inset 0 2px 4px rgba(255,255,255,0.3);
+      width: 140px; height: 140px;
       margin-bottom: 2rem;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
       animation: spin-slow 18s linear infinite;
+      filter: drop-shadow(0 0 24px rgba(201,149,42,0.45));
     }
     @keyframes spin-slow { to { transform: rotateY(360deg); } }
 
@@ -390,7 +386,117 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="coin-icon">🪙</div>
+    <div class="coin-icon">
+      <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" width="140" height="140">
+        <defs>
+          <radialGradient id="coinGrad" cx="38%" cy="35%" r="65%">
+            <stop offset="0%"   stop-color="#f5d060"/>
+            <stop offset="45%"  stop-color="#c9952a"/>
+            <stop offset="100%" stop-color="#6b4008"/>
+          </radialGradient>
+          <radialGradient id="coinInner" cx="40%" cy="38%" r="60%">
+            <stop offset="0%"   stop-color="#f0c84a"/>
+            <stop offset="60%"  stop-color="#b07d18"/>
+            <stop offset="100%" stop-color="#7a5010"/>
+          </radialGradient>
+        </defs>
+
+        <!-- outer coin body -->
+        <circle cx="70" cy="70" r="68" fill="url(#coinGrad)"/>
+
+        <!-- rim highlight -->
+        <circle cx="70" cy="70" r="68" fill="none" stroke="#f5d878" stroke-width="1.2" opacity="0.5"/>
+
+        <!-- outer decorative ring -->
+        <circle cx="70" cy="70" r="62" fill="none" stroke="#7a5010" stroke-width="1.2"/>
+
+        <!-- dot border pattern -->
+        <g fill="#f0c84a" opacity="0.85">
+          <circle cx="70"  cy="8"   r="2"/>
+          <circle cx="70"  cy="132" r="2"/>
+          <circle cx="8"   cy="70"  r="2"/>
+          <circle cx="132" cy="70"  r="2"/>
+          <circle cx="28"  cy="17"  r="1.6"/>
+          <circle cx="112" cy="17"  r="1.6"/>
+          <circle cx="17"  cy="28"  r="1.6"/>
+          <circle cx="123" cy="28"  r="1.6"/>
+          <circle cx="17"  cy="112" r="1.6"/>
+          <circle cx="123" cy="112" r="1.6"/>
+          <circle cx="28"  cy="123" r="1.6"/>
+          <circle cx="112" cy="123" r="1.6"/>
+          <circle cx="49"  cy="10"  r="1.4"/>
+          <circle cx="91"  cy="10"  r="1.4"/>
+          <circle cx="49"  cy="130" r="1.4"/>
+          <circle cx="91"  cy="130" r="1.4"/>
+          <circle cx="10"  cy="49"  r="1.4"/>
+          <circle cx="10"  cy="91"  r="1.4"/>
+          <circle cx="130" cy="49"  r="1.4"/>
+          <circle cx="130" cy="91"  r="1.4"/>
+        </g>
+
+        <!-- inner field -->
+        <circle cx="70" cy="70" r="52" fill="url(#coinInner)"/>
+        <circle cx="70" cy="70" r="52" fill="none" stroke="#f0c84a" stroke-width="0.8" opacity="0.6"/>
+
+        <!-- four corner floral ornaments -->
+        <g fill="#f0c84a" opacity="0.75">
+          <!-- top -->
+          <ellipse cx="70" cy="25" rx="3" ry="5"/>
+          <ellipse cx="64" cy="27" rx="2.5" ry="4" transform="rotate(-30 64 27)"/>
+          <ellipse cx="76" cy="27" rx="2.5" ry="4" transform="rotate(30 76 27)"/>
+          <!-- bottom -->
+          <ellipse cx="70" cy="115" rx="3" ry="5"/>
+          <ellipse cx="64" cy="113" rx="2.5" ry="4" transform="rotate(30 64 113)"/>
+          <ellipse cx="76" cy="113" rx="2.5" ry="4" transform="rotate(-30 76 113)"/>
+          <!-- left -->
+          <ellipse cx="25" cy="70" rx="5" ry="3"/>
+          <ellipse cx="27" cy="64" rx="4" ry="2.5" transform="rotate(30 27 64)"/>
+          <ellipse cx="27" cy="76" rx="4" ry="2.5" transform="rotate(-30 27 76)"/>
+          <!-- right -->
+          <ellipse cx="115" cy="70" rx="5" ry="3"/>
+          <ellipse cx="113" cy="64" rx="4" ry="2.5" transform="rotate(-30 113 64)"/>
+          <ellipse cx="113" cy="76" rx="4" ry="2.5" transform="rotate(30 113 76)"/>
+        </g>
+
+        <!-- laurel wreath arcs -->
+        <g fill="none" stroke="#c9952a" stroke-width="1.2" opacity="0.7">
+          <path d="M 36 50 Q 28 70 36 90"/>
+          <path d="M 104 50 Q 112 70 104 90"/>
+          <path d="M 50 36 Q 70 28 90 36"/>
+          <path d="M 50 104 Q 70 112 90 104"/>
+        </g>
+        <g fill="none" stroke="#f0c84a" stroke-width="0.8" opacity="0.5">
+          <path d="M 40 52 Q 33 70 40 88"/>
+          <path d="M 100 52 Q 107 70 100 88"/>
+          <path d="M 52 40 Q 70 33 88 40"/>
+          <path d="M 52 100 Q 70 107 88 100"/>
+        </g>
+
+        <!-- small leaf pairs on wreath -->
+        <g fill="#d4a830" opacity="0.7">
+          <ellipse cx="36" cy="56" rx="3.5" ry="2" transform="rotate(-60 36 56)"/>
+          <ellipse cx="34" cy="63" rx="3.5" ry="2" transform="rotate(-75 34 63)"/>
+          <ellipse cx="34" cy="77" rx="3.5" ry="2" transform="rotate(75 34 77)"/>
+          <ellipse cx="36" cy="84" rx="3.5" ry="2" transform="rotate(60 36 84)"/>
+          <ellipse cx="104" cy="56" rx="3.5" ry="2" transform="rotate(60 104 56)"/>
+          <ellipse cx="106" cy="63" rx="3.5" ry="2" transform="rotate(75 106 63)"/>
+          <ellipse cx="106" cy="77" rx="3.5" ry="2" transform="rotate(-75 106 77)"/>
+          <ellipse cx="104" cy="84" rx="3.5" ry="2" transform="rotate(-60 104 84)"/>
+        </g>
+
+        <!-- centre N letter -->
+        <text x="70" y="83"
+          text-anchor="middle"
+          font-family="Georgia, serif"
+          font-size="42"
+          font-weight="bold"
+          fill="#1a1208"
+          opacity="0.85">N</text>
+
+        <!-- shine highlight -->
+        <ellipse cx="52" cy="46" rx="14" ry="7" fill="white" opacity="0.08" transform="rotate(-30 52 46)"/>
+      </svg>
+    </div>
     <h1>Numismatics</h1>
     <p class="subtitle">The ancient art and modern science of collecting coins, currency, and medallions across time and civilization.</p>
     <div class="hero-cta">
